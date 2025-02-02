@@ -13,20 +13,20 @@
     .section__pic-container {
       width: 275px;
       height: 275px;
-      border-radius: 50%; /* Makes the container circular */
-      overflow: hidden; /* Ensures the image does not spill outside */
+      border-radius: 50%; /* Ensures circular shape */
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     
-    /* Ensure the image inside fits properly */
+    /* Ensure the image inside maintains circular shape */
     .section__pic-container img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures the image fills the circular area */
+      object-fit: cover;
+      border-radius: 50%; /* Ensures the image itself remains circular */
     }
-    
   }
   
   @media screen and (max-width: 1200px) {
@@ -105,8 +105,11 @@
     }
     .section__pic-container {
       width: 150px;
-      height: 46vw;
-      justify-content: center;
+      height: 150px;
+      border-radius: 50%; /* Keep circular */
+    }
+    .section__pic-container img {
+      border-radius: 50%;
     }
     .section__text__p2 {
       font-size: 1.25rem;
@@ -119,3 +122,22 @@
     }
   }
 
+  @media screen and (min-width: 1400px) {
+    .section__pic-container {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%; /* Ensures circular shape */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Ensure the image inside maintains circular shape */
+    .section__pic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; /* Ensures the image itself remains circular */
+    }
+  }
